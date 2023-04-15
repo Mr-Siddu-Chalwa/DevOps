@@ -1,0 +1,122 @@
+APPLICATION   BUILD_TOOl
+JAVA          MAVEN
+ANDRIOD       GRADLE
+NODE          NODE
+DOTNET        MSBUILD
+
+BUILD_TOOl - compile the source code
+
+Every tool has a configuration file (user -> master -> slave).
+
+POM.XML - configuration xml for many tools
+
+Artifactory is a tool used for managing and storing binary artifacts and dependencies, such as software libraries, Docker images, and other build artifacts. 
+Ex. JFrog
+upload via:
+  1. using curl command to upload artifact to JFrog server or add plugin in pom.xml
+      curl -X PUT -u user:passwd -T artifact url
+  2. pom.xml
+  3. plugin
+  4. ui upload
+
+Jenkinsfile:
+  groove code
+  pipeline: set of instructions that includes the process of contineous delivery
+Node: server where our pipeline gets executed. they are slave
+Agent: all the pre-requisites needed to run a application
+Stage: steps where we execute commands
+
+
+sample 1
+
+Different types of Jenkins pipeline:
+1. Declarative pipeline syntax
+    simplified and more structured way to define pipelines, making them easier to read, write, and maintain.
+    file is made, placed in github & use this in jenkins job
+    pipeline {
+      agent any
+      stages {
+        stage('One') {
+          steps {
+            echo 'Hi, welcome to pipeline demo...'
+          }
+        }
+        stage('Two') {
+          steps {
+            echo 'Sample testing'
+          }
+        }
+      }
+    }
+2. Scripted pipeline syntax
+    It isa more flexible and powerful way to define pipelines, offering a scripting language-like syntax for defining the pipeline steps
+    Below code is placed inside a jenkins job
+    node {
+      stage('Build') {
+          echo 'Building the project...'
+      }
+      stage('Test') {
+          echo 'Running tests...'
+      }
+      stage('Deploy') {
+          echo 'Deploying the application...'
+      }
+    }
+
+Webhook: 
+  It triggers a pipeline
+  trigger can be added for code push, code merge
+  this is where github & jenkins interact with each other
+
+
+Security tools: Sonar, Blackduck & Fortify
+
+
+Jenkins flow:
+child: DevTeam -> code commit to github -> trigger child pipeline -> Security scan using Security tools -> create merge request
+master: merge request get approved -> trigger master pipeline ->  build code -> artifact push -> pull artifact -> deploy to QA -> performance|integration testing -> deployment to syage -> send notification via email
+
+SonarQube:
+  opensource
+  it includes rules to check on code quality like bugs, duplicates, vulnerabilities, test cases
+  promote for code coverage by using test cases + automation testing of application
+  quality gate: quality barier where we set some values for quality profiles when violated raise issue on your code base
+  quality profiles: set of rules defined like test coverage %, allowed no. of bugs, security rating
+  4 types of rules:
+  code smell
+  bugs
+  vulnerabilities
+  Security hotspot
+
+  sonar.properties - It includes
+  projectKey (provided by sonar dashboard), projectName, projectVersion, sources, modules
+
+  stageholders            Metrics               Development view              Testing view
+  client/project          quality gate          set of conditions project     criteria to conclude if testing code is ready for delivery
+    manager                                       must meet
+  architect               code coverage         determine how much code       not applicable for automation testing
+                                                coverage is done
+  developer & Testers     Bugs,                 using metrics to fix          using those metrics to fix test code bugs & enhance test code quality
+                          duplicates,           code bugs & inc quality
+                          vulnerabilities &
+                          code smell
+
+
+Jacoco plugin - testcase report generation tool using POM.XML
+  execution -> prepare agent, test report generated
+
+Jenkins pipeline had stages running in parallel so that if any of stage fails, the build should continue
+On build fail, inform the developer team using shell scripting or using plugin
+use retry option in groovy scripting for allowing developers to continue the build even there is an perticular stage fail via providing ui button
+
+Fortify tool: manages below issues
+  Denial of service attack - don't allow untrusted data
+  xml element entity attack - xml should be configured securely
+  values shading - not to take data from http request inseted take from cookies
+  password management / Hardcode password
+
+version? to track history
+x.x.x.x - major, minor, patch, incrmental
+
+Ansible:
+  includes playbook, configuration file & server file
