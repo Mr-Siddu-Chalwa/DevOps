@@ -1,0 +1,94 @@
+What is the difference between the "chmod" and "chown" commands in Linux?
+	chmod - file permission change - sa uses needed
+	chown - file ownership change - no sa user needed
+How do you change the ownership of a file in Linux?
+	sudo chown usrname flname
+How do you change the permissions of a file in Linux?
+	chmod group operation permission flname
+How do you give read, write, and execute permissions to the owner, group, and others on a file?
+	chmod 777 flname
+How do you remove read and write permissions from a file for everyone except the owner?
+	chmod o-r,o-w flname
+How do you set the sticky bit on a directory?
+	chmod +t dir
+How do you set the setgid bit on a directory?
+	sudo chgrp 0 dir
+How do you set the setuid bit on a file?
+	sudo chown 0 flname
+How do you view the permissions of a file in Linux?
+	ls -l
+How do you view the ownership of a file in Linux?
+	ls -l
+How do you view the size of a file in Linux?
+	ls -l
+How do you view the last modified time of a file in Linux?
+	ls -l
+How do you view the file type of a file in Linux?
+	ls -l
+How do you create a file with specific permissions in Linux?
+	set umask
+	touch flname - default permission (777 - umask)
+How do you create a directory with specific permissions in Linux?
+	set umask
+	mkdir dir - default permission (777 - umask)
+How do you change the permissions of all files in a directory?
+	chmod 777 dir/*
+	chmod -R 755 dir
+How do you change the ownership of all files in a directory?
+	sudo chown $USER dir/*
+How do you change the permissions and ownership of a file in one command?
+	sudo chmod a+w flname; sudo chown $USER flname;
+How do you recursively change the permissions and ownership of all files in a directory?
+	sudo chmod -R a+w dir; sudo chown -R $USER dir;
+How do you list all files in a directory along with their permissions and ownership?
+	ls -l
+How do you find all files in a directory with specific permissions?
+	find dir/ -type f -perm 600	
+How do you find all files in a directory that are executable?
+	find dir/ -type f -executable
+How do you find all files in a directory that are not executable?
+	find dir/ -type f ! -executable
+How do you find all files in a directory that have been modified in the last 24 hours?
+	find dir/ -type f -mtime -1		
+How do you find all files in a directory that have not been modified in the last 24 hours?
+	find dir/ -type f -mtime +1	
+How do you find all files in a directory that are owned by a specific user?
+	find dir/ -type f -user $USER
+How do you find all files in a directory that are owned by a specific group?
+	find dir/ -type f -group $USER
+How do you find all files in a directory that are not owned by a specific user?
+	find dir/ -type f ! -user $USER
+How do you find all files in a directory that are not owned by a specific group?
+	find dir/ -type f ! -group $USER
+How do you find all files in a directory that have a specific size?
+	find dir/ -type f -size 1024
+How do you find all empty directories in a directory?
+	find dir/ -type f -empty
+How do you find all non-empty directories in a directory?
+	find dir/ -type f ! -empty
+How do you find all files in a directory that are hidden?
+	find dir/ -type f -name ".*"	
+How do you find all files in a directory that are not hidden?
+	find dir/ -type f ! -name ".*"
+How do you find all files in a directory that are set to the setuid or setgid bit?
+	find dir/ -type f -user 0 -group 0
+How do you find all files in a directory that are not set to the setuid or setgid bit?
+	find dir/ -type f ! -user 0 ! -group 0
+How do you find all files in a directory that have the sticky bit set?
+	find dir/ -type f -perm /1000
+How do you find all files in a directory that do not have the sticky bit set?
+	find dir/ -type f ! -perm /1000
+How do you find all files in a directory that have the executable bit set?
+	ls -FR | grep "*"
+	find dir/ -type f -perm /a+x	
+How do you find all files in a directory that do not have the executable bit set?
+	find dir/ -type f ! -perm /a+x
+How do you find all files in a directory that have the read bit set?
+	find dir/ -type f -perm /a+r
+How do you find all files in a directory that do not have the read bit set?
+	find dir/ -type f ! -perm /a+r
+How do you find all files in a directory that have the write bit set?
+	find dir/ -type f -perm /a+w
+How do you find all files in a directory that do not have the write bit set?
+	find dir/ -type f ! -perm /a+w
+	
