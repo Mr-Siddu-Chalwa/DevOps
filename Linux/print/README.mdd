@@ -1,0 +1,5 @@
+display messages on the terminal or to issue prompts for taking user input
+
+printf - by default interpret the escape sequence.
+				It supports formated strings
+echo - by default won't interpret the escape sequence, so explicitly need to provide an option (-e)

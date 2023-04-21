@@ -1,0 +1,20 @@
+use the manual for the commands
+sends the output to the pager program, hence preconfigured in $PAGER
+
+
+man page is divided into a no. of compulsory & optional sections.
+each command dosen't have all sections, but 1st three (NAME, SYNOPSIS & DESCRIPTION) are generally seen
+if arguments are within [] then they are optional, else required.
+if ellipsis [file ...], it implies that there can be more instances of precceding word.
+if pipe [ -option1 | -option2 ], it implies that only one of the options shown on either side of the pipe can be used.
+
+sections	Subject
+1		user programs
+2		kernel s/m call
+3		library functions
+4		special files in /dev
+5		Administrative file format
+6		Games
+7		Macro packages & conventions
+8		Administration commands
+

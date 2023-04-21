@@ -1,0 +1,11 @@
+script
+  script started with file typescript in $HOME path
+
+exit
+  terminate the script
+
+script -a
+  append to an existing file typescript
+
+script logfilename
+  logs are stored to logfilename

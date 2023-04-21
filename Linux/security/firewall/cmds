@@ -1,0 +1,43 @@
+ufw enable | disable | reload
+  reloads firewall and enables firewall on boot.
+  unloads firewall and enables firewall on boot.
+  reloads firewall
+
+ufw default allow (default) | deny | reject [incoming (default) | outgoing | routed]
+
+ufw logging on | off | LEVEL
+  path - /var/log/ufw.log
+  LEVEL - off, low (default), medium, high, full
+
+ufw reset
+
+ufw status [verbose | numbered]
+
+ufw --force delete NUM
+
+ufw app list | info | default | update
+
+
+options:
+--dry-run - don't modify anything, just show the changes
+
+
+vi /etc/default/ufw
+  modify default policies
+
+
+ufw [allow | deny | reject] [incoming | outgoing | routed] on NWTWORK_ADAPTER to XX.XX.XX.XX proto PROTOCOL_NAME port XX comment 'comments about this setting'
+
+----------------------------
+
+sudo ufw default deny incoming
+sudo ufw default deny outgoing
+sudo ufw allow in on lo
+sudo ufw allow out on lo
+sudo ufw allow out on wlp4s0 to any port 80,443 proto tcp
+sudo ufw allow in on wlp4s0 from any port 80,443 proto tcp
+sudo ufw allow out 53/tcp
+sudo ufw allow out 53/udp
+sudo ufw allow out 67,68/udp
+sudo ufw reload
+sudo ufw status

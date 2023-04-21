@@ -1,0 +1,4 @@
+display date
+format - internet
+used with suitable format specifier as arguments
+  + symbol followed by % operator & a single char describing the format

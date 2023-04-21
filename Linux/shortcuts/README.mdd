@@ -1,0 +1,35 @@
+ctrl + d - exit the terminal session or program that expects its input from the keyboard
+
+ctrl + s - stop scrolling of screen output & locks keyboard
+
+ctrl + q - resume scrolling of screen output & unlocks keyboard
+
+ctrl + c - interrupts a command
+
+ctrl + u - kill the command line without executing it
+
+ctrl + h - erase char
+
+ctrl + \ - kill running command but creates a core file containing the memory image of the program
+
+ctrl + z - suspends process & returns shell prompts
+
+fg - resume suspended process
+
+ctrl + j | ctrl + m | enter - new line
+
+stty sane - restore terminal to default
+
+ctrl + alt + del - logout
+
+----- vim -----
+ctrl + w - input mode - erase the entire word
+ctrl + r - undo
+ctrl + p - text completion feature in forward dir
+ctrl + n - text completion feature in backword dir
+ctrl + d - go back to vi from shell, scroll half page forward
+ctrl + f - scrolls forward 1 page
+ctrl + b - scrolls backward 1 page
+ctrl + u - scrolls half page backword
+ctrl + g - know current line
+ctrl + r - redo

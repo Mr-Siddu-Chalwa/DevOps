@@ -1,0 +1,7 @@
+passwd
+  expect you to respond 3 times
+  1. old password
+  2. new password
+  3. re-enter new password
+
+if system administrator uses passwd then it won't ask for old password

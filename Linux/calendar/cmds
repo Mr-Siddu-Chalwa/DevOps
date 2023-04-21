@@ -1,0 +1,8 @@
+cal
+  displays the current month calendar
+
+cal 06 2023
+  display the calendar of month June 2023
+
+cal 2023
+  display calendar of the year

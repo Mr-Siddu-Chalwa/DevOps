@@ -1,0 +1,19 @@
+lpr flname.pdf
+  prints a single copy of file
+  prompt returns requestid -> printer_name-job_number
+  default printer is used
+
+options:
+-P <printer_name> - print on specific printer if multiple printer connected
+-T "some title text" - print title on the first page
+-m username - notify user via mail
+-#<no.> - print no. of copies
+
+lpq
+  view the print queue
+
+lprm <requestid> | <job_number>
+  cancel the print you own
+
+lprm -
+  cancel all print you own

@@ -1,0 +1,15 @@
+date
+  display date time
+
+date +%specifier
+date +'%specifier1 %specifier2' | date +"%specifier1 %specifier2"
+specifiers:
+m - month number
+h - month name
+d - day of the month
+y - last 2 digit of year
+H - hour
+M - minute
+S - seconds
+D - date in mm/dd/yy format
+T - time in hh:mm:ss format

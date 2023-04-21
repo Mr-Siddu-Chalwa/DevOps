@@ -1,0 +1,8 @@
+mkdir foldername
+  creaed folder foldername
+
+mkdir f1 f1/f11 f1/f12 f1/f11/f111
+  creates folders:
+  f1 - root
+  f11, f12 - level1
+  f111 - level2

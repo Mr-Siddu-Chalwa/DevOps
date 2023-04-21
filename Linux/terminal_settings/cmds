@@ -1,0 +1,11 @@
+stty --all
+  display all current terminal settings
+
+stty -echo
+  disable echo behaviour
+
+stty intr \^c
+  changing interrupt key ctrl + c
+
+stty sane
+  restore terminal settings

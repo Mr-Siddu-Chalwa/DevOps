@@ -1,0 +1,15 @@
+zip archive.zip flname1 flname2
+  compress & archive flname1 & flname2 as archive.zip
+
+unzip archive.zip
+  interactive unzip
+
+unzip -v archive.zip
+  view the archive without extracting it.
+
+Note - if archive.zip exist then it will append or update, but won't override
+
+options:
+-r recursive compression
+-l convert from LF to CR-LF
+-ll convert from CR-LF to LF

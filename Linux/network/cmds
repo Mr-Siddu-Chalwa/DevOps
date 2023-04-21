@@ -1,0 +1,62 @@
+ip address
+  list all the interface ip address
+
+ip --brief address show
+  brief listing of all the interface ip address
+
+ip -4 address
+  only show IPV4 addresss
+
+ip addresss show dev interface_name
+  show details about perticular interface
+
+ip --brief link show
+  list mac address of all network interface
+
+ip --brief link show dev interface_name
+  mac address of perticular interface
+
+sudo ip link set dev interface_name down|up
+  down|up the network interface
+
+sudo ip link set dev interface_name address new_mac_address
+  change the mac address of network interface
+
+ip -s link
+  show the statistics of all interface
+
+ip -s link show dev interface_name
+  show the statistics of perticular interface
+
+sudo ip link set mtu <number> dev interface_name
+  set an max transmission unit for a perticular interface
+
+ip addr add|del XX.XX.XX.XX/XX dev <interfac_name>
+  add or delete an ip address to an specific interface
+
+ip route
+  view the routing table
+
+sudo ip route add|delete XX.XX.XX.XX/XX via XX.XX.XX.XX
+  add or delete a route to send traffic to destination ip address via gateway
+
+sudo ip route add default via XX.XX.XX.XX dev <interface_name>
+  add a default route with send traffic to default route via gateway on perticualr interface
+
+ip route get XX.XX.XX.XX
+  get route of perticular ip
+
+
+ip neigh show
+  view mac-ip table
+
+sudo ip neigh add XX.XX.XX.XX lladdr <mac_adddress> dev <interface_name>
+  add a new entry in the neighbor table
+
+sudo ip neigh del XX.XX.XX.XX dev <interface_name>
+  remove an entry from neighbor table
+
+options:
+-c - add color to the output
+
+

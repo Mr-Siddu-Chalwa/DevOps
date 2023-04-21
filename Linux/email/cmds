@@ -1,0 +1,26 @@
+mailx username
+  it will wait for user input [cc, subject, body], then enter ctrl + d
+
+mailx -s "this is subject" username < message.txt
+  send a mail non interactively
+
+mailx -s "subject" -c "username1,username2" username < message.txt
+  adding users in cc with non interactive email
+
+mailx
+  all incoming mail is appended to the mailbox & this is displayed
+  > - pointer positioned on the current message
+  enter - view the message body
+  q - quit mailx
+  ? - help
+  + - print next message
+  - - print previous message
+  N - print Nth message
+  h - print header of all message
+  d N - delete Nth message
+  u N - undelete Nth message
+  s fileame - save current message with headers in filename (default - $HOME/mbox)
+  w filename - save current message in filename (default - $HOME/mbox)
+  m user - forwards mail to user
+  r N - replies to sender
+  ! cmd - run unix command

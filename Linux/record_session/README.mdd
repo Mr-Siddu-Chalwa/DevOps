@@ -1,0 +1,3 @@
+store all keystrokes into a file
+
+activities won't be recorded properly for commads used in full screen mode like vi etc.

@@ -1,0 +1,12 @@
+cat flname
+  display content of file flname
+
+cat flname1 flname2
+  concat content of flname1 & flname2 & display
+
+options:
+-v - display non printing char
+-n - numbering
+
+cat
+  wait for user input

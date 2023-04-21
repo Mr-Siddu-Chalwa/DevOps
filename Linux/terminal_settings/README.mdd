@@ -1,0 +1,5 @@
+display & modify terminal settings
+formats:
+  keyword = value
+  keyword
+  -keyword - options is turned off

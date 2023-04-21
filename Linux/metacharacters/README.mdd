@@ -1,0 +1,23 @@
+> - chevron - redirecting any output to a file
+  ls > filename
+
+| - pipeline - output of 1st command is sent as input to 2nd command.
+  ls | wc
+
+* - asterisk - wildcard char to represent any no. of char in a file or arguments excluding hidden files
+  ls *
+
+? - question mark - wildcard char to represent single char in a file or arguments
+  ls file.??
+
+[] - square brackets - specify a raneg or set of char in a filename or arguments
+  ls file[123].txt
+
+& - ampersand - run command in background
+  firefox &
+
+$ - dollar sign - reference a variable in shell script
+  echo $var
+
+. - dot - wildcard char to represent any no. of char in a file or arguments including hidden files
+  ls .

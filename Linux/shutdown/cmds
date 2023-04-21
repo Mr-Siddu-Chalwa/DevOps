@@ -1,0 +1,25 @@
+sudo shutdown 14:50
+  shutdown machine at 14:50
+ 
+sudo shutdown +10
+  shutdown in 10mins
+
+sudo shutdown +0 | now
+  shutdown machine right now
+
+sudo shutdown 15:40 -k "message to all users logged in"
+  a message will be sent to all users logged in to the system.
+
+options:
+-H - write changes, stop processing, power on
+-P - write changes, stop processing, power off
+-r - write changes, reboot
+-k - send warning message to shutdown
+-c - cancle pending shutdown
+
+sudo shutdown -r | sudo reboot
+sudo shutdown -H | sudo halt
+( sudo shutdown +0 | now ) | sudo poweroff
+
+hh:mm - 24h format - absolute time
++m - minutes format - default 1 - relative time

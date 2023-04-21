@@ -1,0 +1,3 @@
+netstat -ntpl
+  list active internet connections
+ 

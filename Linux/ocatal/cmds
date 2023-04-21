@@ -1,0 +1,3 @@
+od -bc flname
+  display value for each char separately - b
+  display printable char & escape sequence - c

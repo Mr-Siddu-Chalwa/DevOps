@@ -1,0 +1,7 @@
+bc calculator
+except input from the keyboard when used without an argument.
+support mutliple calculation in the same line using the ;
+it only performs integer computation & truncates the decimal portion
+eable floating point computation by setting up scale
+you can convert biary to decimal using ibase
+you can convert decimal to binary using obase

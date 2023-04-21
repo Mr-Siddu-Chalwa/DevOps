@@ -1,0 +1,55 @@
+tmux
+  start tmux session with new window
+  default session name as 0
+
+tmux new -s session_name
+  start tmux session with new window named session_name
+
+ctrl + b, shift + %
+  split terminal vertically
+
+ctrl + b, <- ( left button )
+  move to left terminal
+
+ctrl + b, -> ( right button )
+  move to right terminal
+
+exit 
+  close the terminal
+
+ctrl + b, shit + "
+  split terminal horizontal
+
+ctrl + b, up key
+  move to up terminal
+
+ctrl + b, down key
+  move to bottom terminal
+
+ctrl + b, c
+  create another new window
+
+ctrl + b, 0
+  go to 0th window
+
+ctrl + b, ,
+  changes name of window
+
+ctrl + b, d
+  detach tmux
+
+tmux attach -t session_name
+  attach to tmux window
+
+tmux rename-session -t session_existing_name session_new_name
+  rename the tmux session
+
+tmux kill-session -t session_name
+  remove running session
+
+* - current window
+
+tmux ls
+  list windows running
+
+session exit till s/m reboot

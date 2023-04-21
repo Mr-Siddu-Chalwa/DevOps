@@ -1,0 +1,18 @@
+echo
+  print newline
+echo "This is a string"
+  print a string
+echo -e "Enter your name: \n"
+	ecscape sequence is only interpreted when echo is used with -e option.
+
+printf "sometext" 
+	print a string on terminal
+	default - no newline
+
+printf "sometext \n"
+	new line is printed
+	default - escape sequence is interpreted.
+	
+printf "my current shell is %s\n" $SHELL
+	%s will be replaced with the value of $SHELL, acting as a placeholders
+	no comma (,) before $SHELL

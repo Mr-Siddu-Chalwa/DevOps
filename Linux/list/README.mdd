@@ -1,0 +1,3 @@
+it will list the content of a directory
+
+order of content is in ASCII collating sequence. [numbers, uppercase, lowercase]

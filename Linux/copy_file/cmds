@@ -1,0 +1,16 @@
+cp flname1 flname2
+  copies the file flname1 to flname2
+
+  if flname2 not exist -> it will create
+  if flname2 exist -> it will override
+
+cp flname1 flname2 flname3 dir
+  copies flname1, flname2 & flname3 to directory dir
+  dir should exist, cp won't create it.
+
+cp dir1 dir2
+  copies dir1 & all its content to dir2
+
+options:
+-i - interactive copy
+-R - recursive copy

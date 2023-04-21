@@ -1,0 +1,13 @@
+rm filename
+  removes the file filename
+
+rm flname1 flname2
+  removes multiple files.
+
+rm dir
+  remove directory
+
+options:
+-i - interactive deletion
+-r | R - recursive deletion
+-f - force remove

@@ -1,0 +1,6 @@
+tput clear
+  clear an entire terminal
+  this is the standard one
+
+clear
+  mostly used in linux

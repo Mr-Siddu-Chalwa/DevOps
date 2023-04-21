@@ -1,0 +1,41 @@
+gzip arch_name.gz flname1 flname2
+  compress flname1 & flname2 as arch_name.gz in current dir
+
+gunzip arch_name.gz
+  uncompress arch_name.gz in current dir
+
+gunzip arch_name1.gz arch_name2.gz
+  uncompress multiple files
+
+gunzip -c arch_name.gz flname
+  view file without uncompressing
+
+options:
+-l - view compression details
+-r - recursive compression & uncompression
+
+-----------------------------------------------
+
+options:
+-c - create an archive
+-x - extract files from archive
+-t - display files in archive
+only 1 of these are used at a time.
+
+-f archive_name - specify the archive name
+-v verbose
+
+tar -cvf arch_name.tar flname1 flname2
+  archive flname1 & flname2 to arch_name
+
+tar -xvf arch_name.tar
+  extract arch_name to current dir
+
+tar -xvf arch_name.tar flname1
+  only extract flname1 from arch_name
+  specify the path if it is in the sub directory
+
+tag -tvf arch_name.tar
+  view arch_name.tar without extracting
+Note - behaves recursively
+

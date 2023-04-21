@@ -1,0 +1,202 @@
+'' - anything within this single quotes is considered as a string
+
+"" - most of them within this is double quotes is considered as string, but if there are metacharacters then they are evaluated.
+
+"``" - which this tilde is treated as command substitution
+
+tty - name of the current terminal
+
+$$ - PID of current terminal
+
+$SHELL - know the type of shell you are usig
+
+$PATH - sequence of directories that the shell searches to look for a command
+	separated by colon :
+
+command1 ; command2 - if command1 succeed or fail, execute command2
+
+command1 && command2 - if command1 fails then don't execute command2
+
+echo "this is
+> a three line
+> text message"
+	> - represents the secondary prompt
+
+$PAGER - controls the pager man uses
+	values:
+		less
+		more
+		no value - man is using the default pager
+
+Escape Sequence:
+	\a bell
+	\b backspace
+	\c no newline
+	\f formfeed
+	\n newline
+	\r carriage return
+	\t tab
+	\v vertical tab
+	\\ backslash
+	\0n ASCII char represented by octal value n, n < 0377 (octal) | 255 (decimal)
+
+String Formater:
+	%s string
+	%30s print string in 30 char wide
+	%d decimal interger
+	%6d print deciaml in 6 char wide
+	%o ocatal interger
+	%x hexa decimal interger
+	%f floating point number
+	
+$USER - user name
+
+hostname - hostname
+
+-- - represents end of options
+
+$HOME | ~(tilde) | cd - current user home path
+
+pwd - print working directory
+
+cd directory - change directory
+
+rmdir dir
+  remove directory
+  note - directory should be empty, if still want to remove then do it in the reverse order ( 1st remove child, then parent & then root)
+
+file flname
+  knowing your file type
+	file -b flname
+	only display file type, not filename
+
+cmp flname1 flname2
+	2 files are compared byte by byte & stops if found the 1st difference (use -l to display all difference)
+
+comm file[12]
+	find common in files
+	3 column output
+		1 - unique to file1
+		2 - unique to file2
+		3 - common in both files
+	
+	comm -1 file[12]
+		drop 1st column from the output
+
+diff file1 file2
+	display the difference
+
+unix2dos source target
+	convert linux file to windows file
+dos2unix source target
+	convert windows file to linux file
+
+	Note - don't perform this conversion on binary file
+
+lspci - lists all Peripheral Component Interconnect
+
+ping -c <n> domain_name|IP_address
+	check connectivity by sending only n packets
+
+scp -P 22 -i /path_to_public_key [-r] flname|dir user@IP_address:/directory
+  copy the flname or dir (recursively) from local machine to remote machine
+
+scp -P 22 -i /path_to_public_key [-r] user@IP_address:/source_directory /target_directory
+	copy the file or dir (recursively) from remote machine to local machine
+
+ls -l | grep total
+	know the folder size in blocks
+	
+Octal - Significance
+0 - no permissions
+1 - execute only
+2 - write only
+3 - write & execute+
+4 - read only
+5 - read & execute
+6 - read & write
+7 - red, write & execute
+
+id
+	know your own UID & GID without viewing /etc/passwd & /etc/group
+
+umask
+	777 permission to be subtracted with umask value to set a default file or folder permission
+--------------------------------------------
+SPECIAL
+--------------------------------------------
+n<cmd> - repeat factor - run cmd on each line n times
+. - repeating last command
+/pattern - search pattern
+1G - beginning of file
+G - end of file
+nG - go to nth line
+?pattern - serach pattern backword
+!<cmd> - execute unix command
+n - search next occurance
+N - recerse search for n
+--------------------------------------------
+
+--------------------------------------------
+VI
+--------------------------------------------
+vi +/pattern flname - search pattern of file open in vi
+/pattern + n + . - use these trio to search & replace
+:address/source_patttern/[target_pattern]/flags - search & replace
+	address - n | n,m | 1,$ or %
+	flags - g - all occurance, c - interactive substitution
+
+
+:set showmode - messages will now appear in the last line
+:set undolevels=n - set undo levels with n values, default 1000
+
+:x - save file & exit the vi
+:w - save the file
+:w flname - save as flname
+:q - quit
+:.<cmd> - perform operation on current line
+:$<cmd> - perform operation on last line
+:.,$<cmd> - perform operation from current line to last line
+:n,m<cmd> - perform operation from nth line to mth line
+:sh - suspend vi & got to shell
+	exit - got back to vi
+:recover | vi -r flname - recovers the file
+:<cmd>! - override the command
+:h - help
+:n - goto nth line
+:$ - goto last line
+
+n<shortcut> - repeat shortcut n times
+i - insert text to left of cursor
+a - append text to right of cursor
+I - insert text to beginning of line
+A - append text to end of line
+o - open line below
+O - open line above
+r ch - replace single char with ch
+R - Replace text from cursor to right
+s - replace single char with no. of char
+S - replace entire line
+k - move cursor up
+j - move cursor down
+h - move cursor left
+l - move current right
+b - moves back to beginning of word
+e - moves forward to end of word
+w - moves forward to beginning of word
+0 or | - move to 1st char of a current line
+$ - move to end of the current line
+zz - keep vi in center of screen
+ZZ - save & exit vi
+dd - delete entire line
+yy - copy entire line
+p - paste text to the right | line to the below
+P - paste text to the left | lie to the above
+x - delete single char from left
+X - delete single char from right
+J - join lines
+u - undo last change
+U - undo to the current line to original - don't leave current line before invoking this
+
++ SPECIAL
+--------------------------------------------

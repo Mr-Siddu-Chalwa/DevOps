@@ -1,0 +1,13 @@
+uname
+  display the name of os
+
+uname -r
+  current release version
+  1st 2 no. are kernel version
+
+uname -n
+  hostname
+
+uname --all
+  display machine details
+

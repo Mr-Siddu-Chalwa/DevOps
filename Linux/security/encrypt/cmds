@@ -1,0 +1,47 @@
+Path - $HOME/.gnupg
+
+gpg --list-secret-keys
+  list secret keys
+ 
+gpg --list-keys
+	list public keys
+  
+gpg --refresh-keys
+ 	refresh keys
+
+gpg --delete-secret-keys key_name | email
+	remove keys from the secret keyring
+	
+gpg --delete-keys key_name | email
+	remove keys from the public keyring
+     
+gpg --gen-key
+  generate a prive & public key
+
+gpg --export -a key_name
+	a public key will be printed
+	
+gpg --import publickey.pub
+	import a public key
+
+gpg -e -r  "key_name" flname
+	encrypt file "flname" using key "key_name"
+	it will generate file "flname.gpg"
+
+gpg -d flname.gpg
+	decrypt the file "flname.gpg" & print content on terminal
+
+gpg --batch --passphrase key_name_password flname.gpg | gpg --batch flname.gpg
+	decrypt the file "flname.gpg" & create file "flname"
+
+Note - 
+gpg --import private_key.key
+	inseted of using public key on target machine, you can use private key also
+------------------------------------------
+cofigure password cache agent
+nano ~/.gnupg/gpg-agent.conf
+add
+default-cache-ttl 1
+max-cache-ttl 1
+restart agent
+echo RELOADAGENT | gpg-connect-agent

@@ -1,0 +1,13 @@
+mv flname1 flname2
+  rename flname1 as flname2 as both are in the same dir
+
+mv flname1 ./dir1/flname2
+  move flname1 to dir1/ and rename it as flname2
+
+
+mv flname1 flname2 dir1
+  move multiple files to dir1
+
+options:
+-i - interactively move
+-R - recursive move

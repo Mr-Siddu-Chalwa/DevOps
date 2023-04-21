@@ -1,0 +1,15 @@
+more filename
+  display the max content of filename
+
+less filename
+  display the min content of filename
+
+features:
+f or spacebar - display one screen of text
+b - moves back one screen
+v - vi editor mode
+q - quit
+h - help
+j - one line up
+k - one line down
+README.mdd -> SPECIAL

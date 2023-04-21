@@ -1,0 +1,106 @@
+Linux - A multiuser (resources are shared between all users) & multitasking system
+
+case sensitive - files, folders, terminal
+
+Kernel - interacts with the machines hardware & the shell
+	Path - /boot/vmlinuz
+
+Shell - command interpreter - send the input from user to kernal & displays the output from kernal to user
+	default - Bash
+	It is a programming language.
+
+System Calls - commands access the kernal throught the set of functions
+
+internal commands - built in commands that are not stored as separate files & shell won't look in its PATH to execute
+	prioritize this, if both internal & external commands are present.
+
+external commands - commands that are stored as a seperate files & shell look for PATH to execute.
+
+whitespace - string of spaces & tabs together
+
+Command Line - command options... arguments...
+
+options - special argument which are predetermined
+	used with -/-- sign
+	multiple options can be combined with only one - sign
+
+	why options with - sign? -> we have a filename, string as an arguments
+
+FileName Argument - command can take the input from the file.
+	it will generally be at the last of a command after all options
+
+Buffer - temporary storage in memeory maintained by kernel for all keyboard input.
+
+UNIX consider everything as a file.
+
+Escape sequence - 2 char string beginning with a \
+
+file attributes are kept in a separate area of hard disk.
+all physical devices, shell, main memeory are also treated as file.
+
+ordinary/regular file - data as stream of char
+	contains:
+		text file - each line is terminated with newline char
+		binary file - range of ascii entries (0 - 255)
+directory file - entry of everyfile & sub directories
+	contains: file name, inode
+	kernel can only write directory file
+device file - all devices & peripherals
+	path - /dev
+	contains: nothing
+
+	all these are organized in a hierarchical structure ( inverted tree - top is called as root & is represented by / )
+	
+filename:
+	can contain 255 char
+	may or may not have extension (no rule)
+	any ascii char except / & null
+		
+Absolute pathname - located with reference to the root (/)
+
+Relative pathname - located with reference to current dir or parent dir resp (. | ..)
+		
+.profile - contain the set of instructions that are performed when user logs in.
+
+Administrator had full rights to do anything
+
+every file type has a unique magic number which is embedded in the 1st few bytes of file
+
+data can be
+	file
+	pipe
+	data stream
+	user input
+
+end of line in 
+	windows - \r\n - CR LF
+	linux - \n - LF
+
+	conversion of file from windows to linux is simple by removing the \r, mostly done automatic
+	lly, conversion of file from linux to windows is to add \r explicitly 
+
+archive - group a set of files into a single file
+
+1st compress then archive
+1st extract archive then decompress
+
+1 Nibble = 4 Bit
+8 Bits = 1 Byte
+1024 Bytes = 1 Kilobyte
+1024 Kilobytes = 1 Megabyte
+1024 Megabytes = 1 Gigabyte
+1024 Gigabytes = 1 Terabyte
+1024 Terabytes = 1 Petabyte
+1024 Petabytes = 1 Exabyte
+1024 Exabytes = 1 Zettabyte
+1024 Zettabytes = 1 Yottabyte
+1024 Yottabytes = 1 Brontobyte
+1024 Brontobytes = 1 Geopbyte
+
+1 Block = 1024 Bytes
+
+owner has its own set of permissions that override the group owners permission
+
+read & write permission on a ordinary file is influenced by directory housing them.
+	file permission - 000 - useless file but we can delete it
+	file permission - 777 - all permission to a file but we can't delte it

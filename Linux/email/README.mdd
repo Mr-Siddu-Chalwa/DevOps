@@ -1,0 +1,18 @@
+send & recieve mail
+
+mailbox:
+  path - /var/mail/user_name
+  store all the received unread mails
+
+mbox:
+	path - /home/user_name/mbox
+  all viewed messages are stored here
+
+email format:
+1. username
+2. username@hostname
+
+send mode - mailx is used with an email address of recipient
+receive mode - mailx with no arguments
+
+

@@ -1,0 +1,5 @@
+logout
+  exit the session if using the login shell
+
+exit
+  exit a terminal session

@@ -1,0 +1,7 @@
+unix treats terminals as files
+
+it tells you the terminal name you are using
+
+tty - teletype
+
+path - /dev/pts/

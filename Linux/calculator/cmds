@@ -1,0 +1,17 @@
+bc
+  wait for user input
+
+12*12; 2^32
+  multiple calculation in a same line
+
+scale=2
+17/2
+  digits of precision for floating point
+
+ibase=2
+11001010
+  convert binary to decimal
+
+obase=2
+14
+  convert decimal to binary

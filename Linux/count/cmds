@@ -1,0 +1,7 @@
+wc filename
+  display the no. of lines, words & characters of the file 'filename'
+
+options:
+-l - lines
+-w - words
+-c - characters

@@ -1,0 +1,4 @@
+who
+  list the users using the system
+-H - headers
+-u - more details

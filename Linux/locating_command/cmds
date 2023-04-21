@@ -1,0 +1,2 @@
+type command
+  prints the location of command

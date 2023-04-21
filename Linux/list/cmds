@@ -1,0 +1,35 @@
+ls
+  list the contents of path
+
+ls chap*
+  list all the files & folder whose name starts with chap
+
+ls dir1 dir2
+  list all the content of dir1 & dir2
+
+options:
+-l display the details about the file and folders
+-a all
+-t sort by time - new to old
+--color=tty - apply color to output
+-R recursive listing
+-x multicolumn output
+-F represents executable with *, directories with / & symbolic links with @
+-r sorts filenames in reverse order
+-d dirname list only dirname if dirname is a directory
+-t sort filenames by last modified time
+-u sort filenames by last access time
+-i display inode
+
+ls -l
+columns
+  1st
+    1st char
+    - - ordinary file
+    d - directory
+
+  2nd - no. of links
+
+  3rd - ownership
+
+  4th - gorup ownership

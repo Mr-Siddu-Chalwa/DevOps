@@ -1,0 +1,11 @@
+man command
+  displays the entire documentation of command
+
+man -k command | apropos command
+  display one liner discription of a command & other associated with it.
+
+man -f command | whatis command
+  display the purpose of command
+ 
+options:
+-s <no> - section no.
