@@ -149,6 +149,8 @@ vi +/pattern flname - search pattern of file open in vi
 
 :set showmode - messages will now appear in the last line
 :set undolevels=n - set undo levels with n values, default 1000
+:set tabstop=n - set intent width
+:set autointent - set auto intent
 
 :x - save file & exit the vi
 :w - save the file
@@ -165,6 +167,21 @@ vi +/pattern flname - search pattern of file open in vi
 :h - help
 :n - goto nth line
 :$ - goto last line
+
+:sp - split horizontal
+:vs - split vertical
+ctrl+w, j - move to down split
+ctrl+w, k - move to up split
+ctrl+w, h - move to left split
+ctrl+q, l - move to right split
+
+q <char> - start macro
+	perform your operation
+esc, q - stop macro
+n@ <char> - play macro nth time
+:reg a > flname - save macro to the file
+:let @ a = perform you operation - edit the macro
+
 
 n<shortcut> - repeat shortcut n times
 i - insert text to left of cursor
@@ -190,6 +207,7 @@ zz - keep vi in center of screen
 ZZ - save & exit vi
 dd - delete entire line
 yy - copy entire line
+y - copy text
 p - paste text to the right | line to the below
 P - paste text to the left | lie to the above
 x - delete single char from left
